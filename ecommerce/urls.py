@@ -27,7 +27,16 @@ urlpatterns = [
     path('home/',views.homepage, name="homepage"),
     path('',views.homepage, name="homepage"),
     path('about/',views.about, name="about"),
+    path('dashboard/',views.dashboard, name="dashboard"),
     path('contact/',views.contact, name="contact"),
+    path('signup/',views.user_signup, name="usersignup"),
+    path('login/',views.user_login, name="login"),
+    path('logout/',views.user_logout, name="logout"),
+    path('addpost/',views.addpost, name="addpost"),
+    path('updatepost/<int:id>/',views.updatepost,name="updatepost"),
+    path('deletepost/<int:id>/',views.deletepost,name="deletepost"),
+    path('oauth/', include('social_django.urls', namespace='social')),
+
 
     ]
 

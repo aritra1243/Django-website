@@ -15,7 +15,7 @@
   </head>
   <body>
     
-    {% include 'navbar.html'%}
+    {% include 'navbar.html' %}
 
     <h1>homepage</h1>
 
@@ -31,7 +31,7 @@
 
         <div class="container">
 
-            <img src="{{post.image.url}}" style="width: 200px; height: 200px;">
+            {% comment %} <img src="{{ post.image.url }}" style="width: 200px; height: 200px;"> {% endcomment %}
 
               <h1 class="display-4">{{post.title}}</h1>
 
@@ -39,8 +39,10 @@
             
         </div>
     </div>
-    {% endfor %}
-  </div>
+
+    {% endfor %}
+
+  </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
